@@ -16,6 +16,6 @@ spec:
      spec:
        containers:
        - name: jquery-cont
-         image: 427404661948.dkr.ecr.us-east-2.amazonaws.com/jquery-static:$BUILD_NUMBER
+         image: 427404661948.dkr.ecr.us-east-2.amazonaws.com/jquery-static:mynumber
          ports:
          - containerPort: 80
