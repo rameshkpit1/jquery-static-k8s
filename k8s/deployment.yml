@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+    name: static-deploy
+    namespace: app2
+spec:
+   replicas: 1
+   selector:
+     matchLabels:
+       app: jquery
+   template:
+     metadata:
+        name: jquery-pod
+        labels:
+          app: jquery
+     spec:
+       containers:
+       - name: jquery-cont
+         image: 427404661948.dkr.ecr.us-east-2.amazonaws.com/jquery-static:$BUILD_NUMBER
+         ports:
+         - containerPort: 80
